@@ -1,0 +1,101 @@
+
+/* Minimal academic CV site — simple, readable, no JS required */
+:root {
+  --fg: #111;
+  --bg: #fff;
+  --muted: #555;
+  --link: #0b57d0;
+  --border: #e5e7eb;
+  --maxw: 860px;
+  --avatar: 200px; 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #e6e6e6;
+    --bg: #0b0c0e;
+    --muted: #aaa;
+    --link: #a8c7fa;
+    --border: #1f2937;
+  }
+}
+
+* { box-sizing: border-box; }
+html, body { padding: 0; margin: 0; }
+body {
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--fg);
+  background: var(--bg);
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 32px 16px;
+}
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 12px; }
+
+.hero {
+  display: grid;
+  grid-template-columns: var(--avatar) 1fr;
+  gap: 16px;
+  align-items: center;
+}
+.hero img {
+  width: var(--avatar); height: var(--avatar); border-radius: 1%; display: block;
+  border: 1px solid var(--border);
+  background: #f8fafc;
+}
+.hero h1 { margin: 0 0 4px 0; font-size: 28px; }
+.hero .role { margin: 0; color: var(--muted); }
+.hero .affil { margin: 8px 0 0 0; }
+
+nav {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(127,127,127,0.04);
+}
+nav .links {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+nav a { text-decoration: none; color: var(--link); }
+nav a:hover, nav a:focus { text-decoration: underline; }
+
+main { padding: 16px; }
+section { padding: 6px 0 14px; }
+section + section { border-top: 1px dashed var(--border); }
+h2 { font-size: 1.2rem; margin: 10px 0; }
+h3 { font-size: 1rem; margin: 8px 0 4px; }
+ul { margin: 4px 0 12px 20px; }
+li + li { margin-top: 6px; }
+
+.badge {
+  display: inline-block;
+  padding: 1px 6px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--muted);
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+.meta { color: var(--muted); font-size: 0.95rem; }
+a { color: var(--link); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 18px 16px 40px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.kicker { font-style: italic; color: var(--muted); }
+
+/* Accessibility helpers */
+.skip-link {
+  position: absolute; left: -9999px; top: -9999px;
+}
+.skip-link:focus { left: 10px; top: 10px; background: var(--bg); border: 2px solid var(--link); padding: 6px 8px; }
