@@ -5,8 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Forouzan (Rose) Fallah</title>
   <meta name="description" content="Forouzan (Rose) Fallah — Ph.D. student in Computer Science at Arizona State University. Generative AI, diffusion models, T2I, image editing.">
+
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0c0e" media="(prefers-color-scheme: dark)">
+
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme'); // 'light' | 'dark' | 'auto' | null
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t);
+        } else {
+          document.documentElement.removeAttribute('data-theme'); // auto
+        }
+      } catch (e) {}
+    })();
+  </script>
+
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/Picture1.png" type="image/svg+xml">
+  <link rel="icon" href="assets/Picture1.png" type="image/png">
+
   <meta property="og:title" content="Forouzan (Rose) Fallah">
   <meta property="og:description" content="Ph.D. student in Computer Science at Arizona State University. Generative AI, diffusion models, T2I, image editing.">
   <meta property="og:type" content="website">
@@ -41,8 +60,12 @@
         <a href="#education">Education</a>
         <a href="#teaching">Teaching</a>
         <a href="#service">Community Services</a>
-
       </div>
+
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-live="polite">
+        <span class="theme-toggle__icon" aria-hidden="true">🖥️</span>
+        <span class="theme-toggle__label">Auto</span>
+      </button>
     </div>
   </nav>
 
@@ -68,13 +91,10 @@
       </ul>
     </section>
 
-     
-
     <!-- ===  Publications section === -->
-
     <section id="publications">
       <h2>Selected Publications & Preprints</h2>
-  
+
       <ul class="pub-list">
         <!-- 1) TextInVision -->
         <li class="pub-item">
@@ -88,7 +108,7 @@
                 width="320" height="240">
             </a>
           </figure>
-  
+
           <div class="pub-content">
             <h3 class="pub-title">TextInVision: Text and Prompt Complexity Driven Visual Text Generation Benchmark</h3>
             <p class="pub-authors">Forouzan Fallah, Maitreya Patel, Agneet Chatterjee, Vlad I. Morariu, Chitta Baral, Yezhou Yang</p>
@@ -97,14 +117,14 @@
               <span class="badge">Oral</span>
               <span class="badge">Best Paper</span>
             </div>
-  
+
             <nav class="links" aria-label="Links for TextInVision">
               <a class="link-arxiv" href="https://arxiv.org/abs/2503.13730" target="_blank" rel="noopener">arXiv</a>
               <a class="link-website" href="https://github.com/TextinVision/TextinVision">Website</a>
             </nav>
           </div>
         </li>
-  
+
         <!-- 2) RareFlow -->
         <li class="pub-item">
           <figure class="pub-figure">
@@ -117,7 +137,7 @@
                 width="320" height="240">
             </a>
           </figure>
-  
+
           <div class="pub-content">
             <h3 class="pub-title">RareFlow: Physics-Aware Flow-Matching for Cross-Sensor Super-Resolution of Rare-Earth Features</h3>
             <p class="pub-authors">Forouzan Fallah, Wenwen Li, Chia-Yu Hsu, Hyunho Lee, Yezhou Yang</p>
@@ -125,14 +145,14 @@
             <div class="badges">
               <span class="badge badge--preprint">Preprint</span>
             </div>
-  
+
             <nav class="links" aria-label="Links for RareFlow">
               <a class="link-arxiv" href="" target="_blank" rel="noopener">arXiv</a>
               <a class="link-website" href="">Website</a>
             </nav>
           </div>
         </li>
-  
+
         <!-- 3) WSC 2023 -->
         <li class="pub-item">
           <figure class="pub-figure">
@@ -145,7 +165,7 @@
                 width="320" height="240">
             </a>
           </figure>
-  
+
           <div class="pub-content">
             <h3 class="pub-title">Transforming Discrete Event Models To Machine Learning Models</h3>
             <p class="pub-authors">Hessam S Sarjoughian, Forouzan Fallah, Seyyedamirhossein Saeidi, Edward J Yellig</p>
@@ -153,17 +173,16 @@
             <div class="badges">
               <span class="badge badge--preprint">Preprint</span>
             </div>
-  
+
             <nav class="links" aria-label="Links for WSC 2023 paper">
               <a class="link-arxiv" href="https://ieeexplore.ieee.org/abstract/document/10407348" target="_blank" rel="noopener">PDF</a>
             </nav>
           </div>
         </li>
       </ul>
-  
+
       <p class="meta">Full list in <a href="https://scholar.google.com/citations?user=XwzlfO8AAAAJ&hl=en">here</a>.</p>
     </section>
-
 
     <!-- ===  Education section === -->
     <section id="education">
@@ -212,14 +231,13 @@
 
     <section id="service">
       <h2>Community Services</h2>
-        <ul>
-          
-          <li>Reviewer — ICCV 2025</li>
-          <li>Reviewer — NeurIPS 2024-RBFM </li>
-          <li>Reviewer — WACV 2024</li>
-          <li>Reviewer — IEEE Transactions on Multimedia (September 2024)</li>
-          <li>Reviewer — IEEE Robotics and Automation Letters (January 2024)</li>
-        </ul>
+      <ul>
+        <li>Reviewer — ICCV 2025</li>
+        <li>Reviewer — NeurIPS 2024-RBFM </li>
+        <li>Reviewer — WACV 2024</li>
+        <li>Reviewer — IEEE Transactions on Multimedia (September 2024)</li>
+        <li>Reviewer — IEEE Robotics and Automation Letters (January 2024)</li>
+      </ul>
     </section>
   </main>
 
@@ -229,5 +247,80 @@
     </div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
+
+  <script>
+    (function() {
+      const STORAGE_KEY = 'theme'; // 'auto' | 'light' | 'dark'
+      const btn = document.getElementById('theme-toggle');
+
+      function systemPrefersDark() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      }
+
+      function updateThemeColorMeta(theme) {
+        let meta = document.querySelector('meta[name="theme-color"][data-dynamic]');
+        if (!meta) {
+          meta = document.createElement('meta');
+          meta.name = 'theme-color';
+          meta.setAttribute('data-dynamic', '');
+          document.head.appendChild(meta);
+        }
+        if (theme === 'dark') meta.content = '#0b0c0e';
+        else if (theme === 'light') meta.content = '#ffffff';
+        else { // auto → remove dynamic override and let media-based metas apply
+          if (meta && meta.parentNode) meta.parentNode.removeChild(meta);
+        }
+      }
+
+      function apply(theme) {
+        if (theme === 'dark' || theme === 'light') {
+          document.documentElement.setAttribute('data-theme', theme);
+        } else {
+          document.documentElement.removeAttribute('data-theme'); // Auto
+        }
+        try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
+        updateUI(theme);
+        updateThemeColorMeta(theme);
+      }
+
+      function updateUI(theme) {
+        const label = btn.querySelector('.theme-toggle__label');
+        const icon  = btn.querySelector('.theme-toggle__icon');
+
+        if (theme === 'dark') {
+          label.textContent = 'Dark';
+          icon.textContent  = '🌙';
+          btn.setAttribute('aria-label', 'Switch to light theme');
+        } else if (theme === 'light') {
+          label.textContent = 'Light';
+          icon.textContent  = '☀️';
+          btn.setAttribute('aria-label', 'Use system theme');
+        } else {
+          label.textContent = 'Auto';
+          icon.textContent  = '🖥️';
+          btn.setAttribute('aria-label', systemPrefersDark() ? 'System: Dark' : 'System: Light');
+        }
+      }
+
+      function current() {
+        try { return localStorage.getItem(STORAGE_KEY) || 'auto'; } catch (_) { return 'auto'; }
+      }
+
+      btn.addEventListener('click', () => {
+        const cur = current();
+        const next = cur === 'auto' ? 'dark' : cur === 'dark' ? 'light' : 'auto';
+        apply(next);
+      });
+
+      if (window.matchMedia) {
+        const mql = window.matchMedia('(prefers-color-scheme: dark)');
+        const handler = () => { if (current() === 'auto') updateUI('auto'); };
+        if (mql.addEventListener) mql.addEventListener('change', handler);
+        else if (mql.addListener) mql.addListener(handler); // Safari fallback
+      }
+
+      apply(current());
+    })();
+  </script>
 </body>
 </html>

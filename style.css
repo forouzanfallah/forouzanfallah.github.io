@@ -186,3 +186,55 @@ footer {
   #publications .pub-figure { aspect-ratio: 16/9; }
 }
 
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.theme-toggle {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--link);
+  border-radius: 999px;
+  padding: 6px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font: inherit;
+}
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--border);
+}
+
+:root { color-scheme: light dark; }
+
+:root[data-theme="dark"] {
+  --fg: #e6e6e6;
+  --bg: #0b0c0e;
+  --muted: #aaa;
+  --link: #a8c7fa;
+  --border: #1f2937;
+  color-scheme: dark;
+}
+:root[data-theme="light"] {
+  --fg: #111;
+  --bg: #fff;
+  --muted: #555;
+  --link: #0b57d0;
+  --border: #e5e7eb;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] #publications .pub-figure { background: #0f1216; }
+:root[data-theme="dark"] .hero img { background: #0f1216; }
+
+@media (max-width: 420px) {
+  .theme-toggle { width: 100%; justify-content: center; }
+}
