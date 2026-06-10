@@ -47,7 +47,7 @@
           <a href="https://www.linkedin.com/in/forouzanfallah">LinkedIn</a> ·
           <a href="https://scholar.google.com/citations?user=XwzlfO8AAAAJ&hl=en&oi=ao">Google Scholar</a> ·
         </p>
-        <p class="kicker">Generative AI · Diffusion Models · Text-to-Image · Image Editing</p>
+        <p class="kicker">Generative AI · Video & Image Generation · Controllable & Reliable Generation · Evaluation</p>
       </div>
     </div>
   </header>
@@ -73,9 +73,7 @@
     <section id="bio">
       <h2>Hi there!</h2>
       <p>
-        I am a Ph.D. student in Computer Science at Arizona State University, working in the Active Perception Group advised by
-        Prof. Yezhou (YZ) Yang. My research focuses on generative AI, especially text-to-image generation,
-        reliable text rendering, and localized image editing. I aim to make multimodal models more controllable, trustworthy, and ready for real‑world creative and decision‑making tools.
+I am a Ph.D. candidate in Computer Science at Arizona State University, working in the Active Perception Group advised by Prof. Yezhou (YZ) Yang. My research builds controllable and reliable generative models for images and video. Right now I focus on identity consistency in text-to-video, training-free inference-time control, and rigorous evaluation of generative systems. I also work on temporal modeling of long, irregular visual sequences and on agent-based evaluation pipelines. My goal is to make multimodal generative models more controllable, trustworthy, and ready for real‑world creative and decision‑making tools
       </p>
     </section>
 
@@ -126,11 +124,42 @@
 
             <nav class="links" aria-label="Links for TextInVision">
               <a class="link-arxiv" href="https://arxiv.org/abs/2503.13730" target="_blank" rel="noopener">arXiv</a>
-              <a class="link-website" href="https://github.com/TextinVision/TextinVision">Website</a>
+              <a class="link-website" href="https://github.com/TextinVision/TextinVision">Project Page</a>
             </nav>
           </div>
         </li>
 
+            <section id="publications">
+      <h2>Selected Publications & Preprints</h2>
+
+      <ul class="pub-list">
+        <!-- 2) AGFlow -->
+        <li class="pub-item">
+          <figure class="pub-figure">
+            <a href="" aria-label="Open project page: AGFlow">
+              <img
+                src="assets/agflow.png"
+                alt="Demo from TextInVision showing generated text-in-image examples"
+                loading="lazy"
+                decoding="async"
+                width="320" height="240">
+            </a>
+          </figure>
+
+          <div class="pub-content">
+            <h3 class="pub-title">Asynchronous Remote Sensing Time-Series Fusion for Cloud Removal and Anytime Reconstruction</h3>
+            <p class="pub-authors">Forouzan Fallah, Chia-Yu Hsu, Wenwen Li, Anna Liljedahl, Yezhou Yang</p>
+            <p class="pub-venue meta">CVPR 2026 — MORSE Workshop</p>
+            <div class="badges">
+              <span class="badge badge--preprint">Published</span>
+            </div>
+
+            <nav class="links" aria-label="Links for AGFlow">
+              <a class="link-arxiv" href="https://arxiv.org/abs/2605.27726" target="_blank" rel="noopener">arXiv</a>
+              <a class="link-website" href="https://agflow-model.github.io/">Project Page</a>
+            </nav>
+          </div>
+        </li>
         <!-- 2) RareFlow -->
         <li class="pub-item">
           <figure class="pub-figure">
@@ -147,14 +176,14 @@
           <div class="pub-content">
             <h3 class="pub-title">RareFlow: Physics-Aware Flow-Matching for Cross-Sensor Super-Resolution of Rare-Earth Features</h3>
             <p class="pub-authors">Forouzan Fallah, Wenwen Li, Chia-Yu Hsu, Hyunho Lee, Yezhou Yang</p>
-            <p class="pub-venue meta">submitted to ICLR 2026</p>
+            <p class="pub-venue meta">submitted</p>
             <div class="badges">
               <span class="badge badge--preprint">Preprint</span>
             </div>
 
             <nav class="links" aria-label="Links for RareFlow">
               <a class="link-arxiv" href="https://arxiv.org/abs/2510.23816" target="_blank" rel="noopener">arXiv</a>
-              <a class="link-website" href="https://rareflow.github.io/">Website</a>
+              <a class="link-website" href="https://rareflow.github.io/">Project Page</a>
             </nav>
           </div>
         </li>
@@ -235,23 +264,31 @@
       </ul>
     </section>
 
-    <section id="service">
-      <h2>Community Services</h2>
-      <ul>
-        <li>Reviewer — WACV 2026-EVGEN</li>
-        <li>Volunteer — Learning on Graphs (LoG) Conference 2025 in Phoenix </li>
-        <li>Reviewer — ICCV 2025</li>
-        <li>Reviewer — NeurIPS 2024-RBFM </li>
-        <li>Reviewer — WACV 2024</li>
-        <li>Reviewer — IEEE Transactions on Multimedia (September 2024)</li>
-        <li>Reviewer — IEEE Robotics and Automation Letters (January 2024)</li>
-      </ul>
-    </section>
+<section id="service">
+  <h2>Community Service</h2>
+
+  <h4>Reviewing</h4>
+  <ul>
+    <li>June 2026 — Reviewer, British Machine Vision Conference (BMVC)</li>
+    <li>June 2026 — Reviewer, IEEE Transactions on Multimedia</li>
+    <li>December 2026 — Reviewer, IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) EVGEN Workshop</li>
+    <li>May 2025 — Reviewer, International Conference on Computer Vision (ICCV)</li>
+    <li>September 2024 — Reviewer, IEEE Transactions on Multimedia</li>
+    <li>October 2024 — Reviewer, Conference on Neural Information Processing Systems (NeurIPS) RBFM Workshop</li>
+    <li>September 2024 — Reviewer, IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)</li>
+    <li>January 2024 — Reviewer, IEEE Robotics and Automation Letters</li>
+  </ul>
+
+  <h4>Volunteering</h4>
+  <ul>
+    <li>December 2025 — Volunteer, Learning on Graphs (LoG) Conference, Phoenix</li>
+  </ul>
+</section>
   </main>
 
   <footer>
     <div class="container">
-      <p>© <span id="year"></span> Forouzan (Rose) Fallah. Last updated Mar 2026.</p>
+      <p>© <span id="year"></span> Forouzan (Rose) Fallah. Last updated June 2026.</p>
     </div>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </footer>
